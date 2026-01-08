@@ -2,7 +2,7 @@
 
 int main () {
 	float altura, peso, imc;
-
+/*
 	printf ("*************************************************************************************\n");
 	printf ("*************************************************************************************\n");
 	printf ("Esse programa calcula o Índice de Massa Corporal (IMC), de um adulto de 20 a 59 anos.\n");
@@ -14,40 +14,33 @@ int main () {
 	printf ("bom indicador inicial para a maioria dos adultos.\n");
 	printf ("*************************************************************************************\n");
 	printf ("*************************************************************************************\n");
-
+*/
 	printf ("Digite a altura em cm: ");
 	scanf ("%f", &altura);
 	printf ("Digite o peso em Kg: ");
 	scanf ("%f", &peso);
 
 	imc = peso / (altura * altura);
-/*
-	switch (imc) {
-        	case 1:
-			imc < 18.5 
-			printf ("Baixo peso\n");
-			break;
-        	case 2:
-			imc >= 18.5 && imc < 25
-			printf ("Peso normal\n");
-			break;
-        	case 3:
-			imc >= 25 && imc < 30
-			printf ("Sobrepeso\n");
-			break;
-        	case 4:
-			imc >= 30 && imc < 35
-			printf ("Obesidade grau I\n");
-			break;
-        	case 5:
-			imc >= 35 && imc < 40
-			printf ("Obesidade grau II\n");
-			break;
-        	default:
-			imc >= 40
-			printf ("Obesidade grau III\n");
-	}*/
-	
+
+	if (imc < 18.5) {
+		printf ("Baixo peso\n");
+	}
+	else if (imc >= 18.5 && imc < 25) {
+		printf ("Peso normal\n");
+	}
+	else if (imc >= 25 && imc < 30) {
+		printf ("Sobrepeso\n");
+	}
+	else if (imc >= 30 && imc < 35) {
+		printf ("Obesidade grau I\n");
+	}
+	else if (imc >= 35 && imc < 40) {
+		printf ("Obesidade grau II\n");
+	}
+        else { //(imc >= 40)
+		printf ("Obesidade grau III\n");
+	}
+/*	
 	printf ("*************************************************************************************\n");
 	printf ("*************************************************************************************\n");
 	printf ("Este é o referencial para ADULTOS de 20 a 59 anos, independentemente do sexo.\n");
@@ -64,6 +57,6 @@ int main () {
 	printf ("Gestantes → usam curvas próprias de ganho de peso.\n");
 	printf ("*************************************************************************************\n");
 	printf ("*************************************************************************************\n");
-
+*/
 	return 0;
 }
